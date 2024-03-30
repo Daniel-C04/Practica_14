@@ -114,10 +114,6 @@ footer .attribution a {
 
 /*Resolución adapatada a mi computador*/
 @media (min-width: 1024px) {
-  body {
-    height: 100vh;
-    justify-content: center;
-  }
   body main {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 250px 1fr;
