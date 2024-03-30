@@ -1,0 +1,161 @@
+$Color-Boton: hsl(71, 73%, 54%);
+$Color-Fondo: rgba(219, 232, 241, 255);
+$Color-Card1: rgb(255, 255, 255);
+$Color-Card2: rgba(43, 179, 177, 255);
+$Color-Card3: rgba(74, 190, 189, 255);
+$Tipo-Letra: "Karla", sans-serif;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: $Color-Fondo;
+    font-family: $Tipo-Letra;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    main {
+        display: grid;
+        grid-template-rows: 1fr 270px 1fr;
+        border-radius: 0.4rem;
+        width: 350px;
+        margin: 0 2rem;
+        margin-top: 6rem;
+        overflow: hidden;
+        box-shadow: 4px 6px 29px -7px rgba(179, 170, 179, 1);
+    }
+}
+
+section {
+    padding: 2.5rem;
+}
+
+.section-first {
+    background-color: $Color-Card1;
+
+    h1 {
+        color: $Color-Card2;
+        margin-bottom: 2rem;
+    }
+
+    p:nth-child(2) {
+        color: $Color-Boton;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        font-size: 18px;
+    }
+
+    p:nth-child(3) {
+        color: hsl(218, 22%, 67%);
+        font-size: 14.5px;
+        line-height: 2.7rem;
+    }
+}
+
+.section-second {
+    background-color: $Color-Card2;
+
+    h2 {
+        color: $Color-Card1;
+        font-size: 19px;
+        margin-bottom: 2rem;
+    }
+
+    .section-second__pay {
+        color: hsl(204, 43%, 93%);
+        margin-bottom: 1rem;
+
+        span {
+            font-size: 32px;
+            font-weight: 400;
+            color: $Color-Card1;
+            padding-right: 1rem;
+        }
+    }
+
+    p:nth-child(3) {
+        color: hsl(204, 43%, 93%);
+        font-size: 17px;
+        line-height: 2.7rem;
+    }
+
+    button {
+        background-color: #bcdc3c;
+        width: 100%;
+        height: 55px;
+        border: none;
+        border-radius: 0.8rem;
+        margin-top: 3rem;
+        color: rgb(245, 245, 245);
+        font-size: 16px;
+        box-shadow: 5px 5px 20px 2px #4e5c15a2;
+    }
+}
+
+.section-third {
+    background-color: $Color-Card3;
+
+    h2 {
+        color: $Color-Card1;
+        font-size: 18px;
+        margin-bottom: 2.5rem;
+    }
+
+    p {
+        font-size: 16px;
+        color: $Color-Fondo;
+        width: 213.2px;
+        line-height: 2.5rem;
+    }
+}
+
+footer {
+    margin: 3rem 0;
+
+    .attribution {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+}
+/*Resolución adapatada a mi computador*/
+@media (min-width: 1024px) {
+    body {
+        height: 100vh;
+        justify-content: center;
+        main {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 250px 1fr;
+            width: 710px;
+            justify-content: center;
+        }
+    }
+    section {
+        padding: 5rem;
+    }
+    .section-first {
+        grid-column: 1/ span 2;
+        h1{
+            font-size: 26px;
+        }
+        p:nth-child(2) {
+            font-size: 19px;
+        }
+
+        p:nth-child(3) {
+            font-size: 17px;
+        }
+    }
+}
